@@ -16,6 +16,7 @@ Requirements for the software and other tools to build, test and push
 A step by step series of examples that tell you how to get a development environment running
 
 -Download the Android Studio Software from the Google developers Page.
+
 https://developer.android.com/studio?gclid=Cj0KCQjwzYGGBhCTARIsAHdMTQw6DK1T8CFhYKO0zvRul1WprjylwNUm0FYDF5qLJrPNdCkPloOpmMgaAuETEALw_wcB&gclsrc=aw.ds
 
 -Follow the instruction by the software like the download location, SDK's to be installed etc.
