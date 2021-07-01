@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
 //Final Code
 //This is a simple score keeping app where a user has to keep track of score.
 // The App can keep points system of 1 point, 2 points, 3 points
@@ -90,12 +92,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         teamAScore = numPoints + teamAScore;
                     } else {
                         teamAScore = 0;
+                        Toast.makeText(this, "No Negative Score!", Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     if (teamBScore >= 0) {
                         teamBScore = numPoints + teamBScore;
                     } else {
                         teamBScore = 0;
+                        Toast.makeText(this, "No Negative Score!", Toast.LENGTH_SHORT).show();
                     }
                 }
                 break;
@@ -103,14 +107,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.buttonSubtract:
                 if (!teamSelectSwitch.isChecked()) {
                     if (teamAScore <= 0) {
-
+                        Toast.makeText(this, "No Negative Score!", Toast.LENGTH_SHORT).show();
                         teamAScore = 0;
                     } else {
                         teamAScore = teamAScore - numPoints;
                     }
                 } else {
                     if (teamBScore <= 0) {
-
+                        Toast.makeText(this, "No Negative Score!", Toast.LENGTH_SHORT).show();
                         teamBScore = 0;
                     } else {
                         teamBScore = teamBScore - numPoints;

@@ -6,195 +6,229 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TableLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".MainActivity"
-        android:stretchColumns="*">
+        android:layout_height="wrap_content">
 
-
-    <TableRow
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:padding="10dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/team1"
-            android:layout_weight="1"
-            android:textSize="30sp"
-            android:textAlignment="center" />
-
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/team2"
-            android:textSize="30sp"
-            android:layout_weight="1"
-            android:textAlignment="center" />
-
-
-    </TableRow>
-
-    <TableRow
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:padding="10dp">
-
-        <TextView
-            android:id="@+id/teamOneTV"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:background="@color/purple_500"
-            android:textSize="50sp"
-            android:layout_weight="1"
-            android:textAlignment="center" />
-
-
-        <TextView
-            android:layout_width="0dp"
-            android:id="@+id/teamTwoTV"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="0"
-            android:textSize="50sp"
-            android:textAlignment="center" />
-
-
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        >
-
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/selectteam1"
-                android:layout_weight="1"
-                android:textSize="20sp"
-                android:textAlignment="center" />
-
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/teamSelectSwitch"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:switchMinWidth="50dp"
-                android:layout_weight="1"/>
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/selectteam2"
-                android:layout_weight="1"
-                android:textSize="20sp"
-                android:textAlignment="center" />
-
-        </LinearLayout>
-    </TableRow>
-
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:gravity="center_horizontal">
-
-
-        <RadioGroup
-            android:id="@+id/radioGroup"
+        <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_horizontal"
-            android:checkedButton="@id/onePointRadio"
-            android:layout_weight="1">
+            android:orientation="vertical"
+            android:stretchColumns="*"
+            tools:context=".MainActivity">
 
-            <RadioButton
-                android:id="@+id/onePointRadio"
-                android:layout_width="wrap_content"
+            <TableRow
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/onepoint"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
-                android:layout_weight="1"
-                />
-            <RadioButton
-                android:id="@+id/twoPointRadio"
-                android:layout_width="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/team1"
+                    android:textAlignment="center"
+                    android:textSize="30sp" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/team2"
+                    android:textAlignment="center"
+                    android:textSize="30sp" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/twopoints"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
-                android:layout_weight="1"
-                />
-            <RadioButton
-                android:id="@+id/threePointRadio"
-                android:layout_width="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/teamOneTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/purple_500"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="50sp" />
+
+
+                <TextView
+                    android:id="@+id/teamTwoTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="50sp" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/threepoints"
-                android:gravity="center"
-                android:layout_weight="1"
-                />
-        </RadioGroup>
-
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:gravity="center_horizontal">
-
-        <Button
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:text="+"
-            android:id="@+id/buttonAdd"/>
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
 
 
-        <TextView
-            android:id="@+id/pointSelectioinTV"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="30sp"
-            android:layout_gravity="center"
-            android:text="1"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
 
-        <Button
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:id="@+id/buttonSubtract"
-            android:text="-"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/selectteam1"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/teamSelectSwitch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:switchMinWidth="50dp" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/selectteam2"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal">
 
 
-    </TableRow>
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checkedButton="@id/onePointRadio"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/onePointRadio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/onepoint" />
+
+                    <RadioButton
+                        android:id="@+id/twoPointRadio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/twopoints" />
+
+                    <RadioButton
+                        android:id="@+id/threePointRadio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/threepoints" />
+                </RadioGroup>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/buttonAdd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="+" />
 
 
-    </TableLayout>
+                <TextView
+                    android:id="@+id/pointSelectioinTV"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/buttonSubtract"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="-" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:gravity="left">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Note:"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="left">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="1. Highlighted text is the selected team for changing score. \n2. The score can be changed as per team using the switch. \n3.Select the score type like 1 points, 2 points, 3 points. \n4. The score can be increased by the + or - buttons. \n5. The reset button is used to clear all the score." />
+            </TableRow>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+        </TableLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/resetButton"
