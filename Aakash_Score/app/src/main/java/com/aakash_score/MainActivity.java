@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+//This is a simple score keeping app where a user has to keep track of score.
+// The App can keep points system of 1 point, 2 points, 3 points
+// There is a reset button to clear all scores.
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, RadioGroup.OnCheckedChangeListener {
     SwitchCompat teamSelectSwitch;
     TextView teamATextView, teamBTextView, pointSelectorText;
@@ -19,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     RadioGroup numPointsGroup;
     private int numPoints;
 
+    //This is the onCreate method when the App starts this method is called first and is one time only
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +43,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resetButton.setOnClickListener(this);
 
         //Radio group on click listner
-
         try {
             numPointsGroup.setOnCheckedChangeListener(this);
         } catch (Exception e) {
@@ -80,6 +83,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.buttonAdd:
+                //we will check if switch is on team A or Team B
+                //Based on that we will increase score as this button is add button
                 if (!teamSelectSwitch.isChecked()) {
                     if (teamAScore >= 0) {
                         teamAScore = numPoints + teamAScore;
@@ -94,6 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }
                 break;
+            //we will decrease score as this button is subtract button
             case R.id.buttonSubtract:
                 if (!teamSelectSwitch.isChecked()) {
                     if (teamAScore <= 0) {
@@ -111,6 +117,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }
                 break;
+
+            //reset button onclick will call the reset function
             case R.id.resetButton:
                 resetScreen();
                 break;
@@ -125,6 +133,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // defining the on check change of radio buttons
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
+        //we will check the radio button id and then increase the score type to 1,2,3
         switch (checkedId) {
             case R.id.onePointRadio:
                 numPoints = 1;
@@ -138,8 +147,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 numPoints = 3;
                 pointSelectorText.setText(String.valueOf(numPoints));
                 break;
-
-
         }
     }
 
