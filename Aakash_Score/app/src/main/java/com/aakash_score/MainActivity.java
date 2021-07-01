@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-
+//Final Code
 //This is a simple score keeping app where a user has to keep track of score.
 // The App can keep points system of 1 point, 2 points, 3 points
 // There is a reset button to clear all scores.
