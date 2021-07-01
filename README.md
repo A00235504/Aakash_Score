@@ -1,5 +1,13 @@
 # Aakash_Score
-Basic Hello World Program.
+Basic Score keeping App.
+
+**About**
+This is a simple score keeping Application where a user can keep track of score. The App has three scoring systems of one point, two points and three points.
+Depending on what team scores you can select the team using the team selector switch, the highlighted text is the selected team for getting the score updated.
+The App theme color is purple and the highlighted text is purple. There is + and - buttons to increase or decrease the score. 
+Also a reset button is provided to reset the score with one click.
+
+Hope this app solves the problem of keeing up with scores and you can enjoy the game also.
 
 **Getting Started**
 
