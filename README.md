@@ -40,3 +40,6 @@ See also the list of contributors who participated in this project.
 
 **Acknowledgments**
 Professor David.
+
+<img width="406" alt="Screenshot 2021-07-14 at 6 05 02 PM" src="https://user-images.githubusercontent.com/84158990/125699176-7d585247-f496-4cc9-9342-99d7a106573d.png">
+
